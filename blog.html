@@ -4,8 +4,111 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blog</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .btn-prime {
+        background-color: #b4f461;
+        padding: 8px 30px;
+        border-radius: 10px;
+        font-size: 20px;
+        font-weight: bold;
+      }
+    </style>
   </head>
   <body>
-    <h1>hello im blog</h1>
+    <header>
+      <div class="bg-[#f9f7f3] p-6 sticky">
+        <div class="flex justify-between mx-auto max-w-6xl items-center">
+          <div>
+            <a href="./index.html"> <button class="btn-prime">Home</button></a>
+          </div>
+          <div class="flex gap-4 items-center">
+            <img src="./assets/logo.png" alt="" />
+            <p class="font-bold text-xl">Donate Bangladesh</p>
+          </div>
+          <div class="flex gap-4 items-center">
+            <img src="./assets/coin.png" alt="" />
+            <p class="font-bold text-xl text-[#575755]">5500 BDT</p>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!--  accordion section -->
+    <main>
+      <div class="max-w-6xl mx-auto mt-10">
+        <div class="flex items-center">
+          <h1 class="text-4xl font-bold my-8">Important FAQ</h1>
+          <img src="./assets/faq.png" alt="" />
+        </div>
+        <div class="join join-vertical w-full">
+          <div
+            class="collapse collapse-arrow join-item border-base-300 p-5 border"
+          >
+            <input type="radio" name="my-accordion-4" checked="checked" />
+            <div class="collapse-title text-xl font-medium">
+              What is the Document Object Model (DOM)?
+            </div>
+            <div class="collapse-content">
+              <p>
+                It's a tree of a webpage elements that can be changed with
+                JavaScript.
+              </p>
+            </div>
+          </div>
+          <div
+            class="collapse collapse-arrow join-item border-base-300 p-5 border"
+          >
+            <input type="radio" name="my-accordion-4" />
+            <div class="collapse-title text-xl font-medium">
+              How do you select an element from the DOM?
+            </div>
+            <div class="collapse-content">
+              <p>
+                I will use document.getElementById() for an ID,
+                document.getElementsByClassName() for a class,
+                document.getElementsByTagName() for a tag,
+                document.querySelector() for the first match, or
+                document.querySelectorAll() for all matches.
+              </p>
+            </div>
+          </div>
+          <div
+            class="collapse collapse-arrow join-item border-base-300 p-5 border"
+          >
+            <input type="radio" name="my-accordion-4" />
+            <div class="collapse-title text-xl font-medium">
+              What is event delegation in the context of the DOM, and why is it
+              useful?
+            </div>
+            <div class="collapse-content">
+              <p>
+                It lets a parent handle events for its children, so i dont need
+                to add event listeners to each child.
+              </p>
+            </div>
+          </div>
+          <div
+            class="collapse collapse-arrow join-item border-base-300 p-5 border"
+          >
+            <input type="radio" name="my-accordion-4" />
+            <div class="collapse-title text-xl font-medium">
+              How do you manipulate an element's attributes and styles using the
+              DOM?
+            </div>
+            <div class="collapse-content">
+              <p>
+                I can use element.setAttribute() for attributes and
+                element.style for styles.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
   </body>
 </html>
