@@ -12,10 +12,8 @@ function toggleSectionById(id) {
 }
 
 document.getElementById("donation-tab").addEventListener("click", function () {
-  console.log("clicked");
   toggleSectionById("donation-cards");
 });
 document.getElementById("history-tab").addEventListener("click", function () {
-  console.log("clicked2");
   toggleSectionById("history-section");
 });
