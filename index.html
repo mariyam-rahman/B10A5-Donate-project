@@ -41,7 +41,8 @@
           </div>
           <div class="flex gap-4 items-center">
             <img src="./assets/coin.png" alt="" />
-            <p class="font-bold text-xl text-[#575755]">5500 BDT</p>
+            <p id="my-bal" class="font-bold text-xl text-[#575755]">5500</p>
+            <span>BDT</span>
           </div>
         </div>
       </section>
@@ -51,14 +52,14 @@
 
       <section class="my-12">
         <div class="flex justify-center gap-5">
-          <button class="btn-prime">Donation</button>
-          <button class="btn-second">History</button>
+          <button id="donation-tab" class="btn-prime">Donation</button>
+          <button id="history-tab" class="btn-second">History</button>
         </div>
       </section>
 
       <!---------------------------------- donation card section ------------------------------------->
 
-      <section class="max-w-6xl mx-auto mb-10">
+      <section id="donation-cards" class="max-w-6xl mx-auto mb-10">
         <div class="border border-gray-200 p-7 rounded-xl">
           <div class="grid grid-cols-2 justify-center items-center">
             <figure class="">
@@ -67,14 +68,20 @@
             <div class="card-body">
               <div>
                 <div
-                  class="bg-[#f3f3f3] rounded-md inline-flex gap-3 items-center px-3 py-2"
+                  class="bg-[#f3f3f3] rounded-md inline-flex gap-2 items-center px-3 py-2"
                 >
                   <img
                     src="./assets/coin.png"
                     alt="Coin Icon"
                     class="w-6 h-6"
                   />
-                  <p class="font-semibold">0 BDT</p>
+                  <p
+                    id="current-donated-bal"
+                    class="current-donation-bal font-semibold"
+                  >
+                    10
+                  </p>
+                  <span>BDT</span>
                 </div>
               </div>
 
@@ -92,9 +99,9 @@
               <input
                 type="text"
                 placeholder="Write Donation Amount"
-                class="input input-bordered w-full my-3"
+                class="input donate-input input-bordered w-full my-3"
               />
-              <button class="btn-prime">Donate Now</button>
+              <button class="btn-prime donate-now-btn">Donate Now</button>
             </div>
           </div>
         </div>
@@ -106,14 +113,15 @@
             <div class="card-body">
               <div>
                 <div
-                  class="bg-[#f3f3f3] rounded-md inline-flex gap-3 items-center px-3 py-2"
+                  class="bg-[#f3f3f3] rounded-md inline-flex gap-2 items-center px-3 py-2"
                 >
                   <img
                     src="./assets/coin.png"
                     alt="Coin Icon"
                     class="w-6 h-6"
                   />
-                  <p class="font-semibold">0 BDT</p>
+                  <p class="current-donation-bal font-semibold">0</p>
+                  <span>BDT</span>
                 </div>
               </div>
 
@@ -133,9 +141,9 @@
               <input
                 type="text"
                 placeholder="Write Donation Amount"
-                class="input input-bordered w-full my-3"
+                class="donate-input input input-bordered w-full my-3"
               />
-              <button class="btn-prime">Donate Now</button>
+              <button class="btn-prime donate-now-btn">Donate Now</button>
             </div>
           </div>
         </div>
@@ -147,14 +155,15 @@
             <div class="card-body">
               <div>
                 <div
-                  class="bg-[#f3f3f3] rounded-md inline-flex gap-3 items-center px-3 py-2"
+                  class="bg-[#f3f3f3] rounded-md inline-flex gap-2 items-center px-3 py-2"
                 >
                   <img
                     src="./assets/coin.png"
                     alt="Coin Icon"
                     class="w-6 h-6"
                   />
-                  <p class="font-semibold">0 BDT</p>
+                  <p class="current-donation-bal font-semibold">0</p>
+                  <span>BDT</span>
                 </div>
               </div>
 
@@ -175,9 +184,9 @@
               <input
                 type="text"
                 placeholder="Write Donation Amount"
-                class="input input-bordered w-full my-3"
+                class="donate-input input input-bordered w-full my-3"
               />
-              <button class="btn-prime">Donate Now</button>
+              <button class="btn-prime donate-now-btn">Donate Now</button>
             </div>
           </div>
         </div>
@@ -185,14 +194,33 @@
 
       <!------------------------------- history section  --------------------------------------- -->
 
-      <section class="max-w-6xl mx-auto hidden">
-        <div class="border border-gray-100 rounded-xl p-8 my-5">
+      <section id="history-section" class="max-w-6xl mx-auto hidden">
+        <div class="border border-gray-200 rounded-xl p-8 my-5">
           <h2>96500 Taka is Donated for famine-2024 at Feni, Bangladesh</h2>
           <p>
             Date : Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh Standard Time)
           </p>
         </div>
       </section>
+
+      <!-- ------------Modal  --------------->
+      <!-- Open the modal using ID.showModal() method -->
+      <button class="btn" onclick="my_modal_1.showModal()">open modal</button>
+      <dialog id="my_modal_1" class="modal">
+        <div class="modal-box">
+          <h3 class="text-lg font-bold">Hello!</h3>
+          <p class="py-4">Press ESC key or click the button below to close</p>
+          <div class="modal-action">
+            <form method="dialog">
+              <!-- if there is a button in form, it will close the modal -->
+              <button class="btn">Close</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
+
+      <script src="./js/utility.js"></script>
+      <script src="./js/index.js"></script>
     </main>
   </body>
 </html>
