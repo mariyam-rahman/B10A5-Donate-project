@@ -20,10 +20,13 @@ for (const donateNowBtn of donateNowBtns) {
       inputField.value = "";
       return;
     }
+
     const currentDonatedBal = parseFloat(
-      getTextFieldById("current-donated-bal")
+      parent.getElementsByClassName("current-donation-bal")[0].innerText
     );
+
     const newDonatedBal = inputValue + currentDonatedBal;
+    console.log({ inputValue, currentDonatedBal, newDonatedBal });
 
     const donatedAmount = parent.getElementsByClassName(
       "current-donation-bal"
