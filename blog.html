@@ -21,33 +21,36 @@
     </style>
   </head>
   <body>
-    <header>
-      <div class="bg-[#f9f7f3] p-6 sticky">
-        <div class="flex justify-between mx-auto max-w-6xl items-center">
-          <div>
+    <header class="sticky top-0 z-10 shadow-sm">
+      <section class="bg-[#f9f7f3] lg:p-6 p-3">
+        <div
+          class="flex lg:justify-between lg:mx-auto max-w-6xl items-center gap-4"
+        >
+          <div class="">
             <a href="./index.html"> <button class="btn-prime">Home</button></a>
           </div>
-          <div class="flex gap-4 items-center">
+          <div class="flex lg:gap-3 gap-1 items-center">
             <img src="./assets/logo.png" alt="" />
-            <p class="font-bold text-xl">Donate Bangladesh</p>
+            <p class="font-bold lg:text-xl">Donate Bangladesh</p>
           </div>
-          <div class="flex gap-4 items-center">
+          <div class="flex lg:gap-3 gap-1 items-center m-2">
             <img src="./assets/coin.png" alt="" />
-            <p class="font-bold text-xl text-[#575755]">5500 BDT</p>
+            <p id="my-bal" class="font-bold lg:text-xl text-[#575755]">5500</p>
+            <span>BDT</span>
           </div>
         </div>
-      </div>
+      </section>
     </header>
     <!--  accordion section -->
     <main>
       <div class="max-w-6xl mx-auto mt-10">
-        <div class="flex items-center">
+        <div class="flex items-center justify-center">
           <h1 class="text-4xl font-bold my-8">Important FAQ</h1>
           <img src="./assets/faq.png" alt="" />
         </div>
         <div class="join join-vertical w-full">
           <div
-            class="collapse collapse-arrow join-item border-base-300 p-5 border"
+            class="collapse collapse-arrow join-item border-base-300 lg:p-3 border"
           >
             <input type="radio" name="my-accordion-4" checked="checked" />
             <div class="collapse-title text-xl font-medium">

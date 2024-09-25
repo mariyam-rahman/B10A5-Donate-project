@@ -48,8 +48,8 @@ function updateHistory(donationName, amount) {
   const transactionDate = new Date().toLocaleString();
 
   historyList.innerHTML = `
-    <div class="border border-gray-200 rounded-xl p-8 my-5">
-      <h2><span class="font-bold">${amount} Taka </span> is Donated for ${donationName}</h2>
+    <div class="border mx-3 border-gray-200 rounded-xl p-8 my-5">
+      <h2> <span class="font-bold">${amount} Taka </span> is Donated for ${donationName}</h2>
       <p>Date: ${transactionDate}</p>
     </div>`;
 
