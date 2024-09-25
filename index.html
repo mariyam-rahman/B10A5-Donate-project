@@ -11,6 +11,14 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+      .btn-tab {
+        color: gray;
+        border: 1px solid gray;
+        padding: 8px 30px;
+        border-radius: 10px;
+        font-size: 20px;
+        font-weight: bold;
+      }
       .btn-prime {
         background-color: #b4f461;
         padding: 8px 30px;
@@ -18,13 +26,14 @@
         font-size: 20px;
         font-weight: bold;
       }
-      .btn-second {
-        color: gray;
-        border: 1px solid gray;
-        padding: 8px 30px;
-        border-radius: 10px;
-        font-size: 20px;
-        font-weight: bold;
+
+      .selected {
+        background-color: #b4f461;
+        border: 1px solid #b4f461;
+        color: black;
+      }
+      .hiddden {
+        display: none;
       }
     </style>
   </head>
@@ -44,7 +53,6 @@
           <div class="flex lg:gap-3 gap-1 items-center m-2">
             <img src="./assets/coin.png" alt="" />
             <p id="my-bal" class="font-bold lg:text-xl text-[#575755]">5500</p>
-            <span>BDT</span>
           </div>
         </div>
       </section>
@@ -54,8 +62,20 @@
 
       <section class="my-12">
         <div class="flex justify-center gap-5">
-          <button id="donation-tab" class="btn-prime">Donation</button>
-          <button id="history-tab" class="btn-second">History</button>
+          <button
+            onclick="handleSelectDonationTab()"
+            id="donation-tab-btn"
+            class="btn-tab selected"
+          >
+            Donation
+          </button>
+          <button
+            onclick="handleSelectHistoryTab()"
+            id="history-tab-btn"
+            class="btn-tab"
+          >
+            History
+          </button>
         </div>
       </section>
 
@@ -85,7 +105,6 @@
                   >
                     10
                   </p>
-                  <span>BDT</span>
                 </div>
               </div>
 
@@ -126,8 +145,7 @@
                     alt="Coin Icon"
                     class="w-6 h-6"
                   />
-                  <p class="current-donation-bal font-semibold">0</p>
-                  <span>BDT</span>
+                  <p class="current-donation-bal font-semibold">2000</p>
                 </div>
               </div>
 
@@ -170,8 +188,7 @@
                     alt="Coin Icon"
                     class="w-6 h-6"
                   />
-                  <p class="current-donation-bal font-semibold">0</p>
-                  <span>BDT</span>
+                  <p class="current-donation-bal font-semibold">500</p>
                 </div>
               </div>
 
@@ -202,7 +219,7 @@
 
       <!----------history section  ----------->
 
-      <section id="history-section" class="max-w-6xl mx-auto hidden">
+      <section id="history-section" class="max-w-6xl mx-auto hiddden">
         <div id="transation-container "></div>
       </section>
 

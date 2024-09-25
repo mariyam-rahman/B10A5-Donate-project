@@ -5,15 +5,18 @@ function getTextFieldById(id) {
 }
 
 // toggle function
-function toggleSectionById(id) {
-  document.getElementById("donation-cards").classList.add("hidden");
-  document.getElementById("history-section").classList.add("hidden");
-  document.getElementById(id).classList.remove("hidden");
+function handleSelectDonationTab() {
+  document.getElementById("donation-cards").classList.remove("hiddden");
+  document.getElementById("history-section").classList.add("hiddden");
+
+  document.getElementById("donation-tab-btn").classList.add("selected");
+  document.getElementById("history-tab-btn").classList.remove("selected");
 }
 
-document.getElementById("donation-tab").addEventListener("click", function () {
-  toggleSectionById("donation-cards");
-});
-document.getElementById("history-tab").addEventListener("click", function () {
-  toggleSectionById("history-section");
-});
+function handleSelectHistoryTab() {
+  document.getElementById("donation-cards").classList.add("hiddden");
+  document.getElementById("history-section").classList.remove("hiddden");
+
+  document.getElementById("donation-tab-btn").classList.remove("selected");
+  document.getElementById("history-tab-btn").classList.add("selected");
+}
